@@ -1,0 +1,18 @@
+name: aws cloudfront create invalidation 
+image: tnobrega/bb-pipe-aws-cf-invalidate
+variables:
+  - name: AWS_ACCESS_KEY_ID
+   default: ‘${AWS_ACCESS_KEY_ID}‘ #aws Access Key
+  - name: AWS_SECRET_ACCESS_KEY
+   default: ‘${AWS_SECRET_ACCESS_KEY}’ #aws secret key
+  - name: DISTRIBUTION_ID
+   default: ‘${DISTRIBUTION_ID}’ #aws cloudfront distribution id
+ - name: PATHS
+   default: ‘/*’ # Space separated one or more paths (ex: "/index.html /404.html"). Default is '/*' (everything)
+description: Pipeline to create cloudfront invalidation.
+repository: tnobrega/aws-cloudfront-create-invalidation
+maintainer: tiago.bnobrega@gmail.com
+icon: 
+tags:
+  - aws
+  - cloudfront
